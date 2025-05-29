@@ -23,6 +23,13 @@
                     <div><a href="#projects">Projects</a></div>
                     <div><a href="#skills">Skills</a></div>
                     <div><a href="#Contactme">Contact Me</a></div>
+                    <div class="dark-mode-toggle">
+                        <input type="checkbox" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                        <label for="dark-mode-toggle" class="toggle-label">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="hero-section">
@@ -334,6 +341,17 @@
             backSpeed: 80,
             backDelay: 1000,
         });
+        const toggle = document.getElementById('dark-mode-toggle');
+        toggle.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', toggle.checked ? 'enabled' : 'disabled');
+        });
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggle.checked = true;
+        }
     </script>
    
     
