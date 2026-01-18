@@ -1,4 +1,4 @@
-function ProjectCard({ id, number, title, description, skills, githubLink, liveLink, alignment }) {
+function ProjectCard({ id, number, title, description, skills, githubLink, liveLink, alignment, image }) {
     const isLeft = alignment === 'left'
 
     return (
@@ -6,7 +6,7 @@ function ProjectCard({ id, number, title, description, skills, githubLink, liveL
             className={`relative w-full md:w-[calc(100%-120px)] h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-cover bg-center 
                        group transition-all duration-500 
                        ${isLeft ? 'md:ml-0 md:mr-auto' : 'md:mr-0 md:ml-auto'}`}
-            style={{ backgroundImage: `url(/images/projects/${id.replace('-', '')}.png)` }}
+            style={{ backgroundImage: `url(${image})` }}
         >
             {/* Dark Overlay - always visible */}
             <div className="absolute inset-0 bg-[#1f1f1f]/60 dark:bg-black/70 transition-all duration-500"></div>

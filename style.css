@@ -550,21 +550,16 @@ body.dark-mode .project-card::before {
 }
 
 #Project-1 {
-    background-image: url(./images/projects/Project1.png);
+    background-image: url(./images/projects/TelcoChurn.png);
 }
 
 #Project-2 {
     margin: 120px;
-    background-image: url(./images/projects/Project2.png);
+    background-image: url(./images/projects/StudyNotion.png);
 }
 
 #Project-3 {
-    background-image: url(./images/projects/Project3.png);
-}
-
-#Project-4 {
-    margin: 120px;
-    background-image: url(./images/projects/Project4.png);
+    background-image: url(./images/projects/AutoflowAI.png);
 }
 
 .skills-container {
