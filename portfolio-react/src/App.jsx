@@ -10,7 +10,6 @@ function App() {
   const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
-    // Check for saved dark mode preference
     const savedDarkMode = localStorage.getItem('darkMode')
     if (savedDarkMode === 'enabled') {
       setDarkMode(true)
@@ -18,22 +17,19 @@ function App() {
   }, [])
 
   useEffect(() => {
-    // Apply dark mode class to body
     if (darkMode) {
-      document.body.classList.add('dark-mode')
+      document.documentElement.classList.add('dark')
       localStorage.setItem('darkMode', 'enabled')
     } else {
-      document.body.classList.remove('dark-mode')
+      document.documentElement.classList.remove('dark')
       localStorage.setItem('darkMode', 'disabled')
     }
   }, [darkMode])
 
   return (
-    <div className="wrapper">
-      <div className="container">
-        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <HeroSection />
-      </div>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <HeroSection />
       <Projects />
       <Skills />
       <Contact />

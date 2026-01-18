@@ -1,71 +1,24 @@
 import ProjectCard from './ProjectCard'
-
-const projectSkills = [
-    '/images/stack/Bash.svg',
-    '/images/stack/CSS.png',
-    '/images/stack/Javascript.svg',
-    '/images/stack/Express.png',
-    '/images/stack/NextJsCircle.png',
-    '/images/stack/Tailwind.png',
-    '/images/stack/NodeJs.svg',
-    '/images/stack/Redux.svg',
-    '/images/stack/Vercel.svg',
-    '/images/stack/MongoDB.svg',
-]
-
-const projects = [
-    {
-        id: 'Project-1',
-        number: '01',
-        title: 'Tint & Orange',
-        description: 'It is a car modification company which provides you sheets to protect your car from scratch',
-        skills: projectSkills,
-        githubLink: '',
-        liveLink: '',
-        alignment: 'left'
-    },
-    {
-        id: 'Project-2',
-        number: '02',
-        title: 'Tint & Orange',
-        description: 'It is a car modification company which provides you sheets to protect your car from scratch',
-        skills: projectSkills,
-        githubLink: '',
-        liveLink: '',
-        alignment: 'right'
-    },
-    {
-        id: 'Project-3',
-        number: '03',
-        title: 'Tint & Orange',
-        description: 'It is a car modification company which provides you sheets to protect your car from scratch',
-        skills: projectSkills,
-        githubLink: '',
-        liveLink: '',
-        alignment: 'left'
-    },
-    {
-        id: 'Project-4',
-        number: '04',
-        title: 'Tint & Orange',
-        description: 'It is a car modification company which provides you sheets to protect your car from scratch',
-        skills: projectSkills,
-        githubLink: '',
-        liveLink: '',
-        alignment: 'right'
-    }
-]
+import { PROJECTS_DATA } from '../data/constants'
 
 function Projects() {
     return (
-        <div className="project-section" id="projects">
-            <h2 className="page-header">Projects</h2>
-            <div className="project-container">
-                {projects.map((project) => (
-                    <ProjectCard key={project.id} {...project} />
-                ))}
+        <section id="projects" className="py-16 md:py-24 bg-gray-200 dark:bg-gray-800 transition-colors duration-300">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#dc2626] text-center mb-16 md:mb-24">
+                    Projects
+                </h2>
+                <div className="flex flex-col gap-16 md:gap-24">
+                    {PROJECTS_DATA.map((project, index) => (
+                        <ProjectCard
+                            key={project.id}
+                            {...project}
+                            alignment={index % 2 === 0 ? 'left' : 'right'}
+                        />
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
 

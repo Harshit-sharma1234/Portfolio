@@ -1,59 +1,43 @@
-const skillLogos = [
-    '/images/stack/Bash.svg',
-    '/images/stack/Bootstrap.svg',
-    '/images/stack/ChartJs.svg',
-    '/images/stack/CSS.png',
-    '/images/stack/Docker.svg',
-    '/images/stack/Express.png',
-    '/images/stack/Git.svg',
-    '/images/stack/Github.svg',
-    '/images/stack/Graphql.svg',
-    '/images/stack/HTML.png',
-    '/images/stack/Javascript.svg',
-    '/images/stack/K8s.svg',
-    '/images/stack/MaterialUI.svg',
-    '/images/stack/MongoDB.svg',
-    '/images/stack/Next.svg',
-    '/images/stack/NextJsCircle.png',
-    '/images/stack/NodeJs.svg',
-    '/images/stack/React.png',
-    '/images/stack/Redux.svg',
-    '/images/stack/Saas.svg',
-    '/images/stack/Tailwind.png',
-    '/images/stack/Typescript.svg',
-    '/images/stack/Vercel.svg',
-]
+import { SKILL_LOGOS } from '../data/constants'
 
 function Skills() {
     return (
-        <>
-            <div id="skills" className="container">
-                <div className="skills-container">
-                    <div className="skills-container-left">
-                        <h2 className="skill-heading">
-                            <span className="caps">M</span>e and
-                            <br />
-                            My tech stack
+        <section id="skills" className="py-16 md:py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    {/* Left - Text */}
+                    <div className="flex-1 text-center lg:text-left">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#dc2626] mb-4">
+                            <span className="text-6xl md:text-7xl lg:text-8xl">S</span>kills
                         </h2>
-                        <div className="skill-subheading">
-                            <p>Hello! My name is Harshit Sharma, and I am currently a third-year college student pursuing a B.Tech degree. Over the course of my academic journey, I have developed a strong passion for web development and data science. These fields not only fuel my curiosity but also align with my desire to build impactful, data-driven solutions.</p>
-                            <br />
-                            <p>Web development excites me because of its creative and ever-evolving nature. I enjoy bringing ideas to life through clean, user-friendly interfaces and efficient backends. At the same time, data science fascinates me with its power to extract meaningful insights from raw data. I have worked on several projects that combine both disciplines, allowing me to build full-stack applications that also incorporate data analysis and visualization. Through these experiences, I continue to grow as a developer who values both design and data.</p>
-                            <br />
-                        </div>
+                        <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg max-w-md mx-auto lg:mx-0">
+                            I help business owners and startups turn their ideas into high-quality websites
+                            that reflect their vision and drive results.
+                        </p>
                     </div>
-                    <div className="skills-container-right">
-                        <img src="/images/userAsset/blob vector.png" className="blob-style" alt="" />
-                        {skillLogos.map((logo, index) => (
-                            <img key={index} src={logo} alt="" className="skills-logo" />
+
+                    {/* Right - Skills Grid */}
+                    <div className="flex-1 grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-4 md:gap-6">
+                        {SKILL_LOGOS.map((skill, index) => (
+                            <div
+                                key={index}
+                                className="flex items-center justify-center p-2 
+                                           animate-fade-in-up hover:scale-110 hover:rotate-3 
+                                           transition-transform duration-300"
+                                style={{ animationDelay: `${index * 0.05}s` }}
+                            >
+                                <img
+                                    src={skill.src}
+                                    alt={skill.alt}
+                                    className="w-12 h-12 md:w-16 md:h-16 object-contain
+                                               hover:drop-shadow-lg transition-all duration-300"
+                                />
+                            </div>
                         ))}
                     </div>
                 </div>
             </div>
-            <div className="fadetext">
-                <div className="skill-fade-text">Skills</div>
-            </div>
-        </>
+        </section>
     )
 }
 
