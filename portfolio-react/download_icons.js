@@ -7,6 +7,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const icons = [
+    { url: 'https://cdn.simpleicons.org/python', name: 'Python.svg' },
+    { url: 'https://cdn.simpleicons.org/numpy', name: 'NumPy.svg' },
+    { url: 'https://cdn.simpleicons.org/pandas', name: 'Pandas.svg' },
+    { url: 'https://cdn.simpleicons.org/scikitlearn', name: 'ScikitLearn.svg' },
+    { url: 'https://cdn.simpleicons.org/streamlit', name: 'Streamlit.svg' },
     { url: 'https://raw.githubusercontent.com/rstudio/hex-stickers/main/SVG/shiny.svg', name: 'Shiny.svg' },
     { url: 'https://cdn.simpleicons.org/openai', name: 'OpenAI.svg' }
 ];

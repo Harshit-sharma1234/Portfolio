@@ -37,6 +37,11 @@ export const SKILL_LOGOS = [
     { src: '/images/stack/Shiny.svg', alt: 'Shiny' },
     { src: '/images/stack/Tidyverse.svg', alt: 'Tidyverse' },
     { src: '/images/stack/OpenAI.svg', alt: 'OpenAI' },
+    { src: '/images/stack/Python.svg', alt: 'Python' },
+    { src: '/images/stack/NumPy.svg', alt: 'NumPy' },
+    { src: '/images/stack/Pandas.svg', alt: 'Pandas' },
+    { src: '/images/stack/ScikitLearn.svg', alt: 'ScikitLearn' },
+    { src: '/images/stack/Streamlit.svg', alt: 'Streamlit' },
 ];
 
 export const PROJECTS_DATA = [
@@ -106,5 +111,22 @@ export const PROJECTS_DATA = [
         ],
         githubLink: 'https://github.com/Harshit-sharma1234/Autoflow-AI',
         liveLink: 'https://autoflow-ai-api-gz12-g441wm6nb-harshits-projects-e6b705e4.vercel.app/',
+    },
+    {
+        id: 'Project-4',
+        number: '04',
+        title: 'LSTM Sales Forecasting',
+        description: 'Sales forecasting using LSTM models. Built with Python, NumPy, Pandas, Scikit-learn, and Streamlit.',
+        image: '/images/projects/Project4.png',
+        skills: [
+            '/images/stack/Python.svg',
+            '/images/stack/NumPy.svg',
+            '/images/stack/Pandas.svg',
+            '/images/stack/ScikitLearn.svg',
+            '/images/stack/Streamlit.svg',
+            '/images/stack/Github.svg',
+        ],
+        githubLink: 'https://github.com/Harshit-sharma1234/LSTM-Sales-Forecasting-Rossmann-',
+        liveLink: 'https://xbu4o95cshb2l35sjfykg6.streamlit.app/',
     }
 ];
